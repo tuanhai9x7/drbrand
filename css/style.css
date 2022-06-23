@@ -216,11 +216,21 @@ ul {
   align-items: center;
   transition: all 0.25s;
   box-shadow: none !important;
-  -webkit-tap-highlight-color: transparent;
+  /* For Mozilla Firefox */
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+.swiper-button-next::selection,
+.swiper-button-prev::selection {
+  color: none;
+  background: none;
+}
+.swiper-button-next::-moz-selection,
+.swiper-button-prev::-moz-selection {
+  color: none;
+  background: none;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -854,7 +864,7 @@ ul {
     gap: 12px;
   }
   .homepage-wrapper .hero-block .heading-box {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .homepage-wrapper .hero-block .hero-content p:not(:last-child) {
     margin-bottom: 12px;
@@ -866,14 +876,14 @@ ul {
     font-size: 14px;
   }
   .homepage-wrapper .hero-block .hero-img {
-    max-width: 240px;
+    max-width: 220px;
   }
   .homepage-wrapper .about-block {
     padding-top: 60px;
   }
   .homepage-wrapper .about-block .heading-box {
     margin-bottom: 18px;
-    max-width: 280px;
+    max-width: 260px;
   }
   .homepage-wrapper .about-block .about-main {
     gap: 0;
@@ -913,7 +923,7 @@ ul {
     height: 80px;
   }
   .homepage-wrapper .portfolio-block .heading-box {
-    max-width: 270px;
+    max-width: 240px;
   }
   .homepage-wrapper .portfolio-block .portfolio-swiper {
     padding-left: 20px;
@@ -943,7 +953,7 @@ ul {
     max-width: 100px;
   }
   .homepage-wrapper .client-block .heading-box {
-    max-width: 280px;
+    max-width: 250px;
     margin-bottom: 40px;
   }
   .homepage-wrapper .client-block .client-item .quote-icon {

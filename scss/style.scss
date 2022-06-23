@@ -222,7 +222,15 @@ ul {
   align-items: center;
   transition: all 0.25s;
   box-shadow: none !important;
-  -webkit-tap-highlight-color: transparent;
+  &::selection {
+    color: none;
+    background: none;
+  }
+  /* For Mozilla Firefox */
+  &::-moz-selection {
+    color: none;
+    background: none;
+  }
   &:hover {
     background-color: #f5b51b;
     border-color: #f5b51b;
@@ -921,7 +929,7 @@ ul {
     .hero-block {
       gap: 12px;
       .heading-box {
-        margin-bottom: 24px;
+        margin-bottom: 18px;
       }
       .hero-content {
         p {
@@ -937,14 +945,14 @@ ul {
         font-size: 14px;
       }
       .hero-img {
-        max-width: 240px;
+        max-width: 220px;
       }
     }
     .about-block {
       padding-top: 60px;
       .heading-box {
         margin-bottom: 18px;
-        max-width: 280px;
+        max-width: 260px;
       }
       .about-main {
         gap: 0;
@@ -992,7 +1000,7 @@ ul {
     }
     .portfolio-block {
       .heading-box {
-        max-width: 270px;
+        max-width: 240px;
       }
       .portfolio-swiper {
         padding-left: 20px;
@@ -1024,7 +1032,7 @@ ul {
     }
     .client-block {
       .heading-box {
-        max-width: 280px;
+        max-width: 250px;
         margin-bottom: 40px;
       }
       .client-item {
