@@ -215,6 +215,7 @@ ul {
   justify-content: center;
   align-items: center;
   transition: all 0.25s;
+  box-shadow: none !important;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -777,6 +778,10 @@ ul {
   }
 }
 @media screen and (max-width: 767px) {
+  .wrapper {
+    padding-bottom: 60px;
+  }
+
   .container {
     padding: 0 20px;
   }
@@ -793,10 +798,10 @@ ul {
   }
 
   .heading-box .title {
-    font-size: 36px;
+    font-size: 32px;
   }
   .heading-box .title span.small {
-    font-size: 18px;
+    font-size: 16px;
   }
   .heading-box.has-number {
     padding-left: 50px;
@@ -808,15 +813,22 @@ ul {
 
   .homepage-wrapper .homepage-swiper-pagination {
     transform: unset;
-    top: 100px;
+    top: 70px;
   }
   .homepage-wrapper .homepage-swiper-pagination .swiper-pagination-bullet {
     font-size: 14px;
+  }
+  .homepage-wrapper .homepage-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .homepage-wrapper .homepage-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:not(:last-child)::after {
+    height: 18px;
   }
   .homepage-wrapper .navigation {
     bottom: 10px;
   }
   .homepage-wrapper .scroll-label {
+    display: none;
     font-size: 12px;
     bottom: 10px;
   }
@@ -836,9 +848,10 @@ ul {
     margin-bottom: 12px;
   }
   .homepage-wrapper .hero-block .discover-btn {
-    margin-top: 24px;
-    height: 46px;
-    max-width: 190px;
+    margin-top: 16px;
+    height: 36px;
+    max-width: 160px;
+    font-size: 14px;
   }
   .homepage-wrapper .hero-block .hero-img {
     max-width: 240px;
@@ -847,15 +860,20 @@ ul {
     padding-top: 60px;
   }
   .homepage-wrapper .about-block .heading-box {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     max-width: 280px;
+  }
+  .homepage-wrapper .about-block .about-main {
+    gap: 0;
   }
   .homepage-wrapper .about-block .about-content p:not(:last-child) {
     margin-bottom: 16px;
   }
   .homepage-wrapper .about-block .contact-btn {
     margin: 16px auto 0;
-    height: 46px;
+    height: 36px;
+    font-size: 14px;
+    max-width: 160px;
   }
   .homepage-wrapper .why-us-block .heading-box {
     max-width: 280px;
@@ -914,6 +932,13 @@ ul {
   }
   .homepage-wrapper .client-block .heading-box {
     max-width: 280px;
+    margin-bottom: 40px;
+  }
+  .homepage-wrapper .client-block .client-item .quote-icon {
+    margin-bottom: 18px;
+  }
+  .homepage-wrapper .client-block .client-item .author {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 374px) {

@@ -221,6 +221,7 @@ ul {
   justify-content: center;
   align-items: center;
   transition: all 0.25s;
+  box-shadow: none !important;
   &:hover {
     background-color: #f5b51b;
     border-color: #f5b51b;
@@ -842,6 +843,9 @@ ul {
   }
 }
 @media screen and (max-width: 767px) {
+  .wrapper {
+    padding-bottom: 60px;
+  }
   .container {
     padding: 0 20px;
   }
@@ -859,9 +863,9 @@ ul {
   }
   .heading-box {
     .title {
-      font-size: 36px;
+      font-size: 32px;
       span.small {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
     &.has-number {
@@ -875,15 +879,24 @@ ul {
   .homepage-wrapper {
     .homepage-swiper-pagination {
       transform: unset;
-      top: 100px;
+      top: 70px;
       .swiper-pagination-bullet {
         font-size: 14px;
+        &.swiper-pagination-bullet-active {
+          &:not(:last-child) {
+            margin-bottom: 18px;
+            &::after {
+              height: 18px;
+            }
+          }
+        }
       }
     }
     .navigation {
       bottom: 10px;
     }
     .scroll-label {
+      display: none;
       font-size: 12px;
       bottom: 10px;
       .scroll-icon {
@@ -906,9 +919,10 @@ ul {
         }
       }
       .discover-btn {
-        margin-top: 24px;
-        height: 46px;
-        max-width: 190px;
+        margin-top: 16px;
+        height: 36px;
+        max-width: 160px;
+        font-size: 14px;
       }
       .hero-img {
         max-width: 240px;
@@ -917,8 +931,11 @@ ul {
     .about-block {
       padding-top: 60px;
       .heading-box {
-        margin-bottom: 24px;
+        margin-bottom: 18px;
         max-width: 280px;
+      }
+      .about-main {
+        gap: 0;
       }
       .about-content {
         p {
@@ -929,7 +946,9 @@ ul {
       }
       .contact-btn {
         margin: 16px auto 0;
-        height: 46px;
+        height: 36px;
+        font-size: 14px;
+        max-width: 160px;
       }
     }
     .why-us-block {
@@ -994,6 +1013,15 @@ ul {
     .client-block {
       .heading-box {
         max-width: 280px;
+        margin-bottom: 40px;
+      }
+      .client-item {
+        .quote-icon {
+          margin-bottom: 18px;
+        }
+        .author {
+          margin-top: 20px;
+        }
       }
     }
   }
