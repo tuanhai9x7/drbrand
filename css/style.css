@@ -286,6 +286,9 @@ ul {
   position: relative;
   margin-bottom: 0;
   transition: all 0.25s;
+  outline: none;
+  box-shadow: none;
+  border-radius: none;
 }
 .homepage-wrapper .homepage-swiper-pagination .swiper-pagination-bullet::after {
   content: "";
