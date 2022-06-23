@@ -466,9 +466,7 @@ ul {
 }
 .homepage-wrapper .portfolio-block .portfolio-item .portfolio-img {
   background-color: #fff;
-  filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.1));
-}
-.homepage-wrapper .portfolio-block .portfolio-item .portfolio-img img {
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }

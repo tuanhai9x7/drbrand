@@ -477,11 +477,9 @@ ul {
       padding-left: 30px;
       .portfolio-img {
         background-color: #fff;
-        filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.1));
-        img {
-          border-radius: 10px;
-          overflow: hidden;
-        }
+        box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
       }
       .portfolio-detail {
         position: absolute;
