@@ -222,6 +222,7 @@ ul {
   align-items: center;
   transition: all 0.25s;
   box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: #f5b51b;
     border-color: #f5b51b;
@@ -893,7 +894,18 @@ ul {
       }
     }
     .navigation {
-      bottom: 10px;
+      position: unset;
+      transform: unset;
+      .navigation-btn {
+        position: fixed;
+        top: 260px;
+      }
+      .navigation-prev {
+        left: 2px;
+      }
+      .navigation-next {
+        right: 2px;
+      }
     }
     .scroll-label {
       display: none;
@@ -1063,19 +1075,9 @@ ul {
   .homepage-wrapper {
     .homepage-swiper-pagination {
       top: 60px;
-      .page-item {
-        padding: 6px 0;
-        &.active {
-          margin-bottom: 16px;
-          &:not(:last-child) {
-            &::after {
-              height: 16px;
-            }
-          }
-        }
-      }
-      .page-link {
+      .swiper-pagination-bullet {
         font-size: 12px;
+        padding: 6px 0;
       }
     }
     .scroll-label {

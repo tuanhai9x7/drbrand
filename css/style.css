@@ -216,6 +216,7 @@ ul {
   align-items: center;
   transition: all 0.25s;
   box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -825,7 +826,18 @@ ul {
     height: 18px;
   }
   .homepage-wrapper .navigation {
-    bottom: 10px;
+    position: unset;
+    transform: unset;
+  }
+  .homepage-wrapper .navigation .navigation-btn {
+    position: fixed;
+    top: 260px;
+  }
+  .homepage-wrapper .navigation .navigation-prev {
+    left: 2px;
+  }
+  .homepage-wrapper .navigation .navigation-next {
+    right: 2px;
   }
   .homepage-wrapper .scroll-label {
     display: none;
@@ -975,17 +987,9 @@ ul {
   .homepage-wrapper .homepage-swiper-pagination {
     top: 60px;
   }
-  .homepage-wrapper .homepage-swiper-pagination .page-item {
-    padding: 6px 0;
-  }
-  .homepage-wrapper .homepage-swiper-pagination .page-item.active {
-    margin-bottom: 16px;
-  }
-  .homepage-wrapper .homepage-swiper-pagination .page-item.active:not(:last-child)::after {
-    height: 16px;
-  }
-  .homepage-wrapper .homepage-swiper-pagination .page-link {
+  .homepage-wrapper .homepage-swiper-pagination .swiper-pagination-bullet {
     font-size: 12px;
+    padding: 6px 0;
   }
   .homepage-wrapper .scroll-label {
     font-size: 10px;
